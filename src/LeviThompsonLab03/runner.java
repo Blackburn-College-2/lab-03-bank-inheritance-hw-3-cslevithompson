@@ -16,10 +16,7 @@ public class runner {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Account test = new Account(25.0);
-        System.out.println(test.getBalance());
-        test.withdraw(5.0);
-        System.out.println(test.getBalance());
+       
     }
     
 }

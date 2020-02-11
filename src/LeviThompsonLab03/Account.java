@@ -5,30 +5,33 @@
  */
 package LeviThompsonLab03;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author levi.thompson
  */
 public class Account {
-    private double balance;
+    private Money balance;
     
-    public Account() {
-        this.balance = 0.0;
-    }
+    ArrayList<Money> history = new ArrayList<>();
     
-    public Account(double balance) {
+    
+    public Account(Money balance) {
         this.balance = balance;
     }
     
-    public void withdraw(double m) {
-         this.balance = this.balance - m;
+    public void withdraw(Money m) {
+        m.add(m);
+        history.add(m);
     }
     
-    public void deposit(double m) {
-        this.balance = this.balance + m;
+    public void deposit(Money m) {
+        m.subtract(m);
+        history.add(m);
     }
     
-    public double getBalance() {
+    public Money getBalance() {
         return this.balance;
     }
 }
