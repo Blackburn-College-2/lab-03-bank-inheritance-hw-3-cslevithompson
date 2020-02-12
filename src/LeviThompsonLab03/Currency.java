@@ -14,6 +14,7 @@ public class Currency {
     private String name;
     private String symbol;
     
+    //constructor for currency that applies a name and symbol when created
     public Currency(String name, String symbol) {
         this.name = name;
         this.symbol = symbol;

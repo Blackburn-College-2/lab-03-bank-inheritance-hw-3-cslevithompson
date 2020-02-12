@@ -14,37 +14,44 @@ import java.util.ArrayList;
 public class Account {
 
     private Money balance;
-
+    //creating a new arraylist to store history
     private ArrayList<Money> history = new ArrayList<>();
 
+    //constructor that initialies balance in account
     public Account(Money balance) {
         this.balance = balance;
         history.add(balance);
     }
 
+    //method that takes money out of the account
     public void withdraw(Money m) {
         history.add(new Money(m.getCurrency(), -(m.getAmount())));
         this.balance.subtract(m);
         
     }
 
+    //method that puts money into the account
     public void deposit(Money m) {
-        this.balance.add(m);
         history.add(new Money(m.getCurrency(), m.getAmount()));
+        this.balance.add(m);        
     }
 
+    //method that gets the balance
     public Money getBalance() {
         return this.balance;
     }
 
+    //method that prints the history from the array
     public void printHistory() {
-        //System.out.println(history.get(0));
-        //System.out.println(history.get(1));
         for (int i = 0; i < history.size(); i++) {
-            //System.out.println(i);
             System.out.println(history.get(i));
         }
 
+    }
+    
+    @Override
+    public String toString() {
+        return getBalance().toString();
     }
 
 }

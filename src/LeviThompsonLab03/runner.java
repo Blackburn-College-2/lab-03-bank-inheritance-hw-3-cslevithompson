@@ -5,8 +5,6 @@
  */
 package LeviThompsonLab03;
 
-
-
 /**
  *
  * @author paul.kline
@@ -17,15 +15,33 @@ public class runner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Currency c = new Currency("USD","$");
-        Money m = new Money(c,10.0);
+        //creating a new currency
+        Currency c = new Currency("USD", "$");
+        //creating a new money
+        Money m = new Money(c, 10.0);
+        //creating a new account
         Account s = new Account(m);
-        //s.printHistory();
-        s.withdraw(new Money(c, 20));
-        //s.withdraw(m);
-       s.printHistory();
-//        System.out.println(s.getBalance().toString());
-//        
+        s.withdraw(new Money(c, 20.0));
+        System.out.println(s);
+        s.deposit(new Money(c, 10.0));
+        System.out.println(s);
+//        s.withdraw(new Money(c, 30));
+//        System.out.println(s);
+//        s.deposit(new Money(c, 50));
+//        System.out.println(s);
+//        s.withdraw(new Money(c, 80));
+//        System.out.println(s);
+//        s.withdraw(new Money(c, 10));
+//        System.out.println(s);
+//        s.withdraw(new Money(c, 50));
+//        System.out.println(s);
+//        s.deposit(new Money(c, 20));
+//        System.out.println(s);
+//        s.deposit(new Money(c, 60));
+//        System.out.println(s);
+//        s.deposit(new Money(c, 70));
+//        System.out.println(s);
+//        s.printHistory();
     }
 
 }
