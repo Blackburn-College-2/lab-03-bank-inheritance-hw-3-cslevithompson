@@ -20,8 +20,14 @@ public class Currency {
         this.symbol = symbol;
     }
     
-    public boolean equals(Object object) {
-        return true;
+    public boolean equals(Currency currency) {
+        
+        return this.name.contentEquals(currency.name);
     }
     
+    
+    @Override
+    public String toString() {
+        return name + " " + symbol;
+    }
 }

@@ -21,6 +21,7 @@ public class runner {
         Money m = new Money(c, 100.0);
         //creating a new account
         Account s = new Account(m);
+        
         System.out.println(s);
         s.withdraw(new Money(c, 20.0));
         System.out.println(s);
@@ -46,3 +47,7 @@ public class runner {
     }
 
 }
+
+
+//estimated time: 5-6 hours
+//time taken: 5 hours

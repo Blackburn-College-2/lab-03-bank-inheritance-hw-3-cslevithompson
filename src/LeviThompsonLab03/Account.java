@@ -19,8 +19,11 @@ public class Account {
 
     //constructor that initialies balance in account
     public Account(Money balance) {
+        history.add(new Money(balance.getCurrency(),balance.getAmount()));
+        
+        
+        
         this.balance = balance;
-        history.add(balance);
     }
 
     //method that takes money out of the account

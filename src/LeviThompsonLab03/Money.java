@@ -41,7 +41,7 @@ public class Money {
     public Money add(Money input) {
         //stops money from adding if currency is not the same
         //throws an error
-        if (this.currency != input.currency) {
+        if (input.currency.equals(currency) == false) {
             throw new ArithmeticException("not the same currency");
         } else {
             this.amount += input.amount;
@@ -54,7 +54,7 @@ public class Money {
     public Money subtract(Money input) {
         //stops money from subtracting if currency is not the same
         //throws an error
-        if (this.currency != input.currency) {
+        if (input.currency.equals(currency) == false) {
             throw new ArithmeticException("not the same currency");
         } else {
             this.amount -= input.amount;
