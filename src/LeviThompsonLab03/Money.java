@@ -32,7 +32,7 @@ public class Money {
     
     //method to return a string version of money
     public String getAmountString() {
-        String amountInString = currency.toString() + amount;
+        String amountInString = currency.toString() + " " +amount;
 
         return amountInString;
     }
@@ -44,7 +44,7 @@ public class Money {
         if (this.currency != input.currency) {
             throw new ArithmeticException("not the same currency");
         } else {
-            input.amount += this.amount;
+            this.amount += input.amount;
         }
 
         return input;
@@ -57,10 +57,10 @@ public class Money {
         if (this.currency != input.currency) {
             throw new ArithmeticException("not the same currency");
         } else {
-            input.amount -= this.amount;
+            this.amount -= input.amount;
         }
 
-        return input;
+        return this;
     }
 
     //overrides the toString method to print money as getAmountString

@@ -18,30 +18,31 @@ public class runner {
         //creating a new currency
         Currency c = new Currency("USD", "$");
         //creating a new money
-        Money m = new Money(c, 10.0);
+        Money m = new Money(c, 100.0);
         //creating a new account
         Account s = new Account(m);
+        System.out.println(s);
         s.withdraw(new Money(c, 20.0));
         System.out.println(s);
         s.deposit(new Money(c, 10.0));
         System.out.println(s);
-//        s.withdraw(new Money(c, 30));
-//        System.out.println(s);
-//        s.deposit(new Money(c, 50));
-//        System.out.println(s);
-//        s.withdraw(new Money(c, 80));
-//        System.out.println(s);
-//        s.withdraw(new Money(c, 10));
-//        System.out.println(s);
-//        s.withdraw(new Money(c, 50));
-//        System.out.println(s);
-//        s.deposit(new Money(c, 20));
-//        System.out.println(s);
-//        s.deposit(new Money(c, 60));
-//        System.out.println(s);
-//        s.deposit(new Money(c, 70));
-//        System.out.println(s);
-//        s.printHistory();
+        s.withdraw(new Money(c, 30));
+        System.out.println(s);
+        s.deposit(new Money(c, 50));
+        System.out.println(s);
+        s.withdraw(new Money(c, 80));
+        System.out.println(s);
+        s.withdraw(new Money(c, 10));
+        System.out.println(s);
+        s.withdraw(new Money(c, 50));
+        System.out.println(s);
+        s.deposit(new Money(c, 20));
+        System.out.println(s);
+        s.deposit(new Money(c, 60));
+        System.out.println(s);
+        s.deposit(new Money(c, 70));
+        System.out.println(s);
+        s.printHistory();
     }
 
 }
