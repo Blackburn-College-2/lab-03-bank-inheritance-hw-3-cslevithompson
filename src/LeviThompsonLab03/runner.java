@@ -5,6 +5,8 @@
  */
 package LeviThompsonLab03;
 
+
+
 /**
  *
  * @author paul.kline
@@ -15,8 +17,15 @@ public class runner {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-       
+        Currency c = new Currency("USD","$");
+        Money m = new Money(c,10.0);
+        Account s = new Account(m);
+        //s.printHistory();
+        s.withdraw(new Money(c, 20));
+        //s.withdraw(m);
+       s.printHistory();
+//        System.out.println(s.getBalance().toString());
+//        
     }
-    
+
 }

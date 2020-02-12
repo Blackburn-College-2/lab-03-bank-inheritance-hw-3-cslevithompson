@@ -12,26 +12,39 @@ import java.util.ArrayList;
  * @author levi.thompson
  */
 public class Account {
+
     private Money balance;
-    
-    ArrayList<Money> history = new ArrayList<>();
-    
-    
+
+    private ArrayList<Money> history = new ArrayList<>();
+
     public Account(Money balance) {
         this.balance = balance;
+        history.add(balance);
     }
-    
+
     public void withdraw(Money m) {
-        m.add(m);
-        history.add(m);
+        history.add(new Money(m.getCurrency(), -(m.getAmount())));
+        this.balance.subtract(m);
+        
     }
-    
+
     public void deposit(Money m) {
-        m.subtract(m);
-        history.add(m);
+        this.balance.add(m);
+        history.add(new Money(m.getCurrency(), m.getAmount()));
     }
-    
+
     public Money getBalance() {
         return this.balance;
     }
+
+    public void printHistory() {
+        //System.out.println(history.get(0));
+        //System.out.println(history.get(1));
+        for (int i = 0; i < history.size(); i++) {
+            //System.out.println(i);
+            System.out.println(history.get(i));
+        }
+
+    }
+
 }
