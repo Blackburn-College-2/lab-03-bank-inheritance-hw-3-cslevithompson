@@ -8,6 +8,7 @@ package LeviThompsonLab03;
 /**
  *
  * @author levi.thompson
+ * cccaw is my personal laptop in case the curiosity rises
  */
 public class Money {
 

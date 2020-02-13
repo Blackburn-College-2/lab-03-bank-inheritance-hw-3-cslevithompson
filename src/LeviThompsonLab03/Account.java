@@ -10,6 +10,7 @@ import java.util.ArrayList;
 /**
  *
  * @author levi.thompson
+ * cccaw is my personal laptop in case the curiosity rises
  */
 public abstract class Account {
 

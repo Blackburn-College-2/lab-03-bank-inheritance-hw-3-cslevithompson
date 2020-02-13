@@ -7,7 +7,8 @@ package LeviThompsonLab03;
 
 /**
  *
- * @author paul.kline
+ * @author levi.thompson
+ * cccaw is my personal laptop in case the curiosity rises
  */
 public class runner {
 

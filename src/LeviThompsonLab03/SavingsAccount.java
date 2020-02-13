@@ -7,7 +7,8 @@ package LeviThompsonLab03;
 
 /**
  *
- * @author cccaw
+ * @author levi.thompson
+ * cccaw is my personal laptop in case the curiosity rises
  */
 public class SavingsAccount extends Account{
     
