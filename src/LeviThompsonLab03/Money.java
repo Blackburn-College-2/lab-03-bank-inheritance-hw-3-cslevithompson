@@ -29,10 +29,10 @@ public class Money {
     public double getAmount() {
         return this.amount;
     }
-    
+
     //method to return a string version of money
     public String getAmountString() {
-        String amountInString = currency.toString() + " " +amount;
+        String amountInString = currency.toString() + " " + amount;
 
         return amountInString;
     }
@@ -60,7 +60,18 @@ public class Money {
             this.amount -= input.amount;
         }
 
-        return this;
+        return input;
+    }
+
+    //method to multiply things to money
+    public Money multiply(Money input) {
+        if (input.currency.equals(currency) == false) {
+            throw new ArithmeticException("not the same currency");
+        } else {
+            this.amount *= input.amount;
+        }
+
+        return input;
     }
 
     //overrides the toString method to print money as getAmountString

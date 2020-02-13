@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author levi.thompson
  */
-public class Account {
+public abstract class Account {
 
     private Money balance;
     //creating a new arraylist to store history

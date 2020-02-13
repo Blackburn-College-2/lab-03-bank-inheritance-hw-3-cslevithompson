@@ -20,8 +20,10 @@ public class runner {
         //creating a new money
         Money m = new Money(c, 100.0);
         //creating a new account
-        Account s = new Account(m);
+        Account s = new CheckingAccount(m);
         
+        
+        //testing code like: withdraw, deposit, toString override, and print history
         System.out.println(s);
         s.withdraw(new Money(c, 20.0));
         System.out.println(s);
@@ -43,6 +45,9 @@ public class runner {
         System.out.println(s);
         s.deposit(new Money(c, 70));
         System.out.println(s);
+        
+        System.out.println("");
+        System.out.println("the history of 'transactions'");
         s.printHistory();
     }
 
